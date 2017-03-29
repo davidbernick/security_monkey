@@ -15,14 +15,14 @@ import re
 import ast
 from setuptools import setup
 
-_version_re = re.compile(r'__version__\s+=\s+(.*)')
-with open('security_monkey/__init__.py', 'rb') as f:
-    SECURITY_MONKEY_VERSION = str(ast.literal_eval(_version_re.search(
-        f.read().decode('utf-8')).group(1)))
+#_version_re = re.compile(r'__version__\s+=\s+(.*)')
+#with open('security_monkey/__init__.py', 'rb') as f:
+#    SECURITY_MONKEY_VERSION = str(ast.literal_eval(_version_re.search(
+#        f.read().decode('utf-8')).group(1)))
 
 setup(
     name='security_monkey',
-    version=SECURITY_MONKEY_VERSION,
+    version='0.8.1',
     long_description=__doc__,
     packages=['security_monkey'],
     include_package_data=True,
@@ -64,7 +64,8 @@ setup(
             'nose==1.3.0',
             'mock==1.0.1',
             'moto==0.4.30',
-            'freezegun>=0.3.7'
+            'freezegun>=0.3.7',
+            'mixer==5.5.7'
         ]
     }
 )
