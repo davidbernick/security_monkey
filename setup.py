@@ -66,7 +66,6 @@ setup(
             'mock==1.0.1',
             'moto==0.4.30',
             'freezegun>=0.3.7',
-            'mixer==5.6.6',
         ]
     }
 )
